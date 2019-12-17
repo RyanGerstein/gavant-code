@@ -1,0 +1,17 @@
+.table {
+  > thead {
+    > tr {
+      > th {
+        border-top: 0;
+      }
+    }
+  }
+
+    &-clickable-rows {
+        tbody {
+            tr {
+                cursor: pointer;
+            }
+        }
+    }
+}

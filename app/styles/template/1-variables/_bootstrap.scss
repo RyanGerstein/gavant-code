@@ -1,0 +1,164 @@
+// Colors
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #f0f2f4 !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$grays: ();
+$grays: map-merge(
+    (
+        '100': $gray-100,
+        '200': $gray-200,
+        '300': $gray-300,
+        '400': $gray-400,
+        '500': $gray-500,
+        '600': $gray-600,
+        '700': $gray-700,
+        '800': $gray-800,
+        '900': $gray-900
+    ),
+    $grays
+) !default;
+
+$blue: #1283da !default;
+$indigo: #6610f2 !default;
+$purple: #7c39ed !default;
+$pink: #e929ba !default;
+$red: #e52e4d !default;
+$orange: #f7653b !default;
+$yellow: #df8d00 !default;
+$green: #11af22 !default;
+$teal: #02a9a4 !default;
+$cyan: #01a9da !default;
+
+$colors: () !default;
+$colors: map-merge(
+    (
+        'blue': $blue,
+        'indigo': $indigo,
+        'purple': $purple,
+        'pink': $pink,
+        'red': $red,
+        'orange': $orange,
+        'yellow': $yellow,
+        'green': $green,
+        'teal': $teal,
+        'cyan': $cyan,
+        'white': $white,
+        'gray': $gray-600,
+        'gray-dark': $gray-800
+    ),
+    $colors
+);
+
+$primary: $blue !default;
+$secondary: $gray-600 !default;
+$success: $green !default;
+$info: $purple !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-200 !default;
+$dark: $gray-800 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+    (
+        'primary': $primary,
+        'secondary': $secondary,
+        'success': $success,
+        'info': $info,
+        'warning': $warning,
+        'danger': $danger,
+        'light': $light,
+        'dark': $dark,
+        'white': $white
+    ),
+    $theme-colors
+);
+
+$social-colors: (
+    'facebook': #3b5998,
+    'twitter': #1da1f2,
+    'google': #dc4e41,
+    'youtube': #f00,
+    'vimeo': #1ab7ea,
+    'dribbble': #ea4c89,
+    'github': #181717,
+    'instagram': #e4405f,
+    'pinterest': #bd081c,
+    'flickr': #0063dc,
+    'bitbucket': #0052cc
+) !default;
+
+// Body
+$body-bg: #fff !default;
+$body-color: $gray-800 !default;
+
+// Spacers
+$spacer: 1rem !default;
+
+// Typography
+$font-family-sans-serif: 'Lato', sans-serif !default;
+$font-family-base: $font-family-sans-serif !default;
+
+$headings-font-weight: 700 !default;
+$display1-weight: 700 !default;
+$display2-weight: 700 !default;
+$display3-weight: 700 !default;
+$display4-weight: 700 !default;
+
+$lead-font-size: 1.25rem !default;
+$lead-font-weight: 400 !default;
+
+// Links
+$link-color: $gray-800 !default;
+$link-decoration: none !default;
+$link-hover-color: darken($link-color, 15%) !default;
+$link-hover-decoration: none !default;
+
+// Buttons
+$btn-font-weight: 700 !default;
+
+// Border radius
+$border-radius: 0.35rem !default;
+$border-radius-lg: 0.4rem !default;
+$border-radius-sm: 0.25rem !default;
+
+// Navbar
+$navbar-padding-y: $spacer !default;
+$navbar-brand-font-size: 1.5rem !default;
+$navbar-nav-link-padding-x: 0.85rem !default;
+
+// Nav
+// $nav-pills-border-radius:  $border-radius !default;
+$nav-pills-link-active-color: $gray-800 !default;
+$nav-pills-link-active-bg: $gray-300 !default;
+
+// Spacing
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+    (
+        -3: -$spacer,
+        -2: - ($spacer * 0.5),
+        -1: - ($spacer * 0.25),
+        0: 0,
+        1: ($spacer * 0.25),
+        2: ($spacer * 0.5),
+        3: $spacer,
+        4: ($spacer * 1.5),
+        5: ($spacer * 3),
+        6: ($spacer * 4.5),
+        7: ($spacer * 6),
+        8: ($spacer * 7.5),
+        9: ($spacer * 9)
+    ),
+    $spacers
+);

@@ -1,0 +1,10 @@
+html,
+body {
+  height: 100%;
+}
+
+body > .ember-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

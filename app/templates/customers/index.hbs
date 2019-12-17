@@ -1,0 +1,18 @@
+<Page::Header @title="Customers" />
+<Page::Content>
+  <div class="d-flex justify-content-between align-content-center mb-3 form-inline">
+    <h5 class="card-title">
+      {{this.sortedCustomers.length}} Results
+    </h5>
+    <div>
+      <select class="form-control" onchange={{action (mut this.sortProperty) value="target.value"}}>
+        <option value="lastName" selected={{eq this.sortProperty "lastName"}}>
+          Sort by name
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="card">
+    <CustomersTable @model={{this.sortedCustomers}} />
+  </div>
+</Page::Content>
