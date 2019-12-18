@@ -29,6 +29,12 @@ export default Component.extend({
         breakpoints: ['tablet', 'desktop', 'jumbo']
       },
       {
+        label: 'Phone',
+        valuePath: 'phoneNumber',
+        sortable: false,
+        breakpoints: ['tablet', 'desktop', 'jumbo']
+      },
+      {
         label: 'Company',
         valuePath: 'company',
         sortable: false,

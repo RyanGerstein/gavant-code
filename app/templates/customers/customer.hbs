@@ -44,9 +44,11 @@
               <div class="form-group col-md-7">
                 <label for="customerEmailAddress">Email</label>
                 <Input
-                  @type="text"
+                  @type="email"
                   @class="form-control"
                   @id="customerEmailAddress"
+                  @required={{true}}
+                  @value={{this.model.emailAddress}}
                 />
               </div>
               <div class="form-group col-md-5">
@@ -55,7 +57,7 @@
                   @type="tel"
                   @class="form-control"
                   @id="customerPhoneNumber"
-                  placeholder="(555) 555-5555"
+                  @placeholder="(555) 555-5555"
                   @required={{true}}
                   @value={{this.model.phoneNumber}}
                 />
@@ -90,6 +92,8 @@
                   @id="customerBudget"
                   @required={{true}}
                   @value={{this.model.budget}}
+                  @pattern="(0|[1-9][0-9]*)"
+                  @title="Positive Integer Value"
                 />
               </div>
             </div>
