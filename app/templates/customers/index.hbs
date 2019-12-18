@@ -6,10 +6,20 @@
     </h5>
     <div>
       <select class="form-control" onchange={{action (mut this.sortProperty) value="target.value"}}>
-        <option value="lastName" selected={{eq this.sortProperty "lastName"}}>
+        <option value="name" selected={{eq this.sortProperty "name"}}>
           Sort by name
         </option>
+        <option value="budget" selected={{eq this.sortProperty "budget"}}>
+          Sort by budget
+        </option>
       </select>
+    </div>
+    <div>
+      <input class="form-control"
+        onkeyup={{action (mut this.filterProperty) value="target.value"}}
+        onchange={{action (mut this.filterProperty) value="target.value"}}
+        placeholder="Filter List" type="text"
+      />
     </div>
   </div>
   <div class="card">
