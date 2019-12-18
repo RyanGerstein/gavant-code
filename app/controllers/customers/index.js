@@ -10,6 +10,7 @@ export default Controller.extend({
   filterProperty: null,
 
   init: function() {
+    this._super(...arguments);
     this.sortOptions = {
       'name': ['lastName', 'firstName'],
       'budget': ['budget:desc', 'lastName', 'firstName']
