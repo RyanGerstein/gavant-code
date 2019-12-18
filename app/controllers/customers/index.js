@@ -12,7 +12,7 @@ export default Controller.extend({
   init: function() {
     this.sortOptions = {
       'name': ['lastName', 'firstName'],
-      'budget': ['budget:desc']
+      'budget': ['budget:desc', 'lastName', 'firstName']
     };
     this.filterFields = ['lastName', 'firstName'];
   },
