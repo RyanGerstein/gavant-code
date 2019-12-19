@@ -12,6 +12,6 @@ module('Integration | Component | page/nav', function(hooks) {
 
     await render(hbs`{{page/nav}}`);
 
-    assert.equal(this.element.textContent.trim().replace(/\s+/g, ' '), '📈 GavantCRM Customers');
+    assert.equal(this.element.textContent.trim().replace(/\s+/g, ' '), '📈 GavantCRM Customers Dashboard');
   });
 });
