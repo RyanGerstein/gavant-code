@@ -10,6 +10,10 @@ Router.map(function() {
   this.route('customers', function() {
     this.route('customer', { path: '/:customer_id' });
   });
+
+  this.route('dashboard', {
+    path: '/dashboard'
+  });
 });
 
 export default Router;

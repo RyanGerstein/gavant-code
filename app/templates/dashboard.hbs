@@ -1,0 +1,49 @@
+<Page::Header @title="Overview Dashboard" />
+<Page::Content>
+  <div class="d-flex justify-content-between align-content-center mb-3 form-inline">
+    <h5 class="card-title">
+      {{this.customerCount}} Customers totalling ${{this.customerTotalIncome}} Revenue
+    </h5>
+  </div>
+  <div class="d-flex justify-content-between align-content-center mb-3 form-inline">
+    <h5 class="card-title">
+      Top Accounts:
+    </h5>
+    <div class="card">
+        <CustomersTable @model={{this.topCustomers}} />
+    </div>
+  </div>
+  
+
+  <div class="d-flex justify-content-between align-content-center mb-3 form-inline">
+    <h5 class="card-title">
+      No Income Customers:
+    </h5>
+    <div class="card">
+        <CustomersTable @model={{this.retiredAccounts}} />
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-between align-content-center mb-3 form-inline">
+    <h5 class="card-title">
+        Company Rankings:
+    </h5>
+    <div class="card">
+        <table style="width: 400px;">
+            <tr>
+                <th>Company Name</th>
+                <th># Employees</th>
+                <th>Total Budget</th>
+            </tr>
+            {{#each this.companyAccountData as |company|}}
+                <tr>
+                    <td>{{company.name}}</td>
+                    <td>{{company.employees}}</td>
+                    <td>{{company.totalBudget}}</td>
+                </tr>
+            {{/each}}
+        </table>
+    </div>
+  </div>
+  
+</Page::Content>
