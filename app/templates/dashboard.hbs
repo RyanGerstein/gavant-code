@@ -10,7 +10,7 @@
       Top Accounts:
     </h5>
     <div class="card">
-        <CustomersTable @model={{this.topCustomers}} />
+      <CustomersTable @model={{this.topCustomers}} />
     </div>
   </div>
   
@@ -20,29 +20,33 @@
       No Income Customers:
     </h5>
     <div class="card">
-        <CustomersTable @model={{this.retiredAccounts}} />
+      <CustomersTable @model={{this.retiredAccounts}} />
     </div>
   </div>
 
   <div class="d-flex justify-content-between align-content-center mb-3 form-inline">
     <h5 class="card-title">
-        Company Rankings:
+      Company Rankings:
     </h5>
     <div class="card">
-        <table style="width: 400px;">
+      <table class="table table-striped table-sm">
+        <thead>
+          <tr>
+            <th>Company Name</th>
+            <th># Employees</th>
+            <th>Total Budget</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each this.companyAccountData as |company|}}
             <tr>
-                <th>Company Name</th>
-                <th># Employees</th>
-                <th>Total Budget</th>
+              <td>{{company.name}}</td>
+              <td>{{company.employees}}</td>
+              <td>{{company.totalBudget}}</td>
             </tr>
-            {{#each this.companyAccountData as |company|}}
-                <tr>
-                    <td>{{company.name}}</td>
-                    <td>{{company.employees}}</td>
-                    <td>{{company.totalBudget}}</td>
-                </tr>
-            {{/each}}
-        </table>
+          {{/each}}
+        </tbody>
+      </table>
     </div>
   </div>
   
